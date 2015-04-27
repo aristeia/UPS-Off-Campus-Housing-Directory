@@ -1,0 +1,10 @@
+#shib_ds: https://idp.pugetsound.edu/idp/shibboleth
+assertion_handler: onelogin
+protected_path: /auth/shibboleth/callback
+saml_idp: https://idpdev.pugetsound.edu/idp/shibboleth
+saml_sp: http://cs240.pugetsound.edu:3000/rack-saml-sp
+metadata_path: /Shibboleth.sso/Metadata
+saml_sess_timeout: 1800
+shib_app_id: default
+validation_error: true
+

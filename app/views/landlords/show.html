@@ -1,0 +1,40 @@
+<div class = "container" id ="content">
+	<h1><%= @landlord.name %></h1>
+	
+	<p><b>Email:</b> <a href="mailto:<%= @landlord.email %>"><%= @landlord.email %></a></p>
+	<p><b>Phone:</b> <%= @landlord.phone1 %></p>
+	<h2>Listings</h2>
+	<table id="listings_table" class="striped">
+		<thead>
+			<th>Address</th>
+			<th>Type</th>
+			<th>Rent</th>
+		</thead>
+		<tbody>
+			<% @listings.each do |listing| %>
+				<tr>
+					<td><%= link_to listing.address, residence_path(listing.id) %></td>
+					<td style="text-align: center;"><%= listing.restype %></td>
+					<td>$<%= listing.total_monthly_rent %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<h2>Reviews</h2>
+	<%= link_to "Submit a new review", :controller => "reviews", :action => "new", :landlord => @landlord_id %>
+	<table id="reviews_table" class="striped">
+		<thead>
+			<th>Rating</th>
+			<th>Comments</th>
+		</thead>
+		<tbody>
+			<% @reviews.each do |review| %>
+				<tr>
+					<td style = "text-align: center"><div class="rateit" data-rateit-value="<%= review.score %>" data-rateit-ispreset="true" data-rateit-readonly="true"></td>
+					<td style><%= review.text %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,23 @@
+<div class = "container" id ="content">
+	<h1>Welcome</h1>
+		<table class = "row">
+			<thead> Your current properties are listed here.
+				<tr>
+					<th>Photo</th>
+					<th>Address</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody> <%= link_to "Add a new Property+", dashboard_addProperty_path%>
+				<% @listings.each do |residence| %>
+					<tr>
+						<td><img style="height:auto; width:auto; max-width:100px; max-height:100px;"
+							src="<%= residence.images[0].nil? ? (residence.restype[1..4] == 'part' ? '../images/default_apt.png' : '../images/default_house.png')  : residence.images[0].file_location %>"></td>
+						<td style = "text-align: center"><%=residence.address%></td>
+						<% print residence.restype %>
+						<td><%= link_to "Edit This Property", dashboard_editProperty_path({:id => residence.id})%></td>
+					</tr>
+				<% end %>
+			 </tbody>
+		</table>
+</div>

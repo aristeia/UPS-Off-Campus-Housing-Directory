@@ -1,0 +1,63 @@
+<div id="map"></div>
+
+<div id="map_hint" style="display:<%= @display_hint %>">
+	<h3>Click markers to view properties.</h3>
+	<h5><a href="#" onClick="close_hint(); return false;">Close this hint.</a></h5>
+</div>
+
+<div id="map_button_bar">
+	<div id="map_button">
+		<a href="#" onClick="showMap(); return false;">▼ Back to Map View ▼</a>
+	</div>
+</div>
+
+<div id="content" class="container">
+	
+	<!-- Delete this eventually -->
+	<!-- <p><%= @debug %></p> -->
+
+	<!-- <h1 class="sixteen columns">Search Results</h1> -->
+
+	<script type="text/javascript"> var residences_path = "<%= residences_path %>";</script>
+
+	<div id="results_container" class="sixteen columns">
+		<table id="results_table" class="striped">
+			<thead>
+				<tr>
+					<th class="collapsible"><div class="collapsible">Photo</div></th>
+					<th>Address</th>
+					<th class="collapsible"><div class="collapsible">Type</div></th>
+					<th class="collapsible"><div class="collapsible">Bedrooms</div></th>
+					<th class="collapsible"><div class="collapsible">Bathrooms</div></th>
+					<th class="collapsible"><div class="collapsible">Distance</div></th>
+					<th class="collapsible"><div class="collapsible">Rent</div></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @residences.each do |residence| %>
+					<tr id='<%= "residence_#{residence.id}" %>'>
+						<td class="collapsible" width="100">
+							<div class="collapsible">
+								<% if residence.default_image.nil? %>
+									<img src="<%= residence.restype[1..4] == 'part' ? '../images/default_apt_preview.png' : '../images/default_house_preview.png' %>" />
+								<% else %>
+									<img src="<%= residence.default_image.file_location_url(:thumb) if residence.default_image %>" />
+								<% end %>
+							</div>
+						</td>
+						<!-- <td><%= link_to residence.address, residence_path({:id => residence.id}) %></td> -->
+						<td><a href="<%= residence_path({:id => residence.id}) %>" onClick="showResidence(<%= residence.id %>, '<%= residence_path({:id => residence.id})%>'); return false;"><%= residence.address %></a></td>
+						<td class="collapsible" style="text-align: center"><div class="collapsible"><%= residence.restype %></div></td>
+						<td class="collapsible" style="text-align: center"><div class="collapsible"><%= residence.bedrooms_available %></div></td>
+						<td class="collapsible" style="text-align: center"><div class="collapsible"><%= residence.bathrooms %></div></td>
+						<td class="collapsible" style="text-align: center"><div class="collapsible"><%= residence.miles_from_campus %></div></td>
+						<td class="collapsible" ><div class="collapsible"><%= residence.total_monthly_rent %></div></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="twelve columns" id="residence_detail_container"></div>
+
+</div>

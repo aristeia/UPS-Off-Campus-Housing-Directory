@@ -1,0 +1,331 @@
+#logo {
+	width: 240px;
+	height: 78px;
+	background-color: #620205;
+	background-image: url("../images/header_logo_long.png");
+	background-size: 215px 78px;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+	float: left;
+}
+
+#resizeImage
+{
+	width:100;
+	height:100;
+}
+
+#header {
+	background-color: #FFF;
+	height: 77px;
+	z-index: 10;
+}
+
+#header, #nav_bar, #login_bar, #map_button_bar {
+	border-bottom: solid 1px #DDD;
+	width: 100%;
+}
+
+#header_content {
+	width: 992px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#title {
+	font-family: "Univers";
+	font-weight: 300;
+	color: #600;
+	float: left;
+	margin: 20px 0 0 20px;
+}
+
+#nav_bar {
+	background-color: #FFF;
+}
+
+#map_button_bar, #map_button_bar a {
+	color: #FFF;
+	text-align: center;
+	padding: 10px 0;
+	background-color: #600;
+}
+
+#nav ul {
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#nav ul li {
+	display: inline;
+}
+
+#nav a {
+	padding: 0 20px;
+	padding-top: 16px;
+	padding-bottom: 13px;
+}
+
+#nav a:visited, a:visited {
+	color: #600;
+}
+
+#nav a:hover {
+	background-color: #600;
+	color: #FFF;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Univers", "Helvetica", "Arial", sans-serif;
+	font-weight: bold;
+	color: #600;
+}
+
+a:hover {
+	color: #A20518;
+}
+
+.bar {
+	text-align: center;
+}
+
+#login_select {
+	border-bottom: 1px solid #DDD;
+}
+
+#login_select button {
+	margin: 10px 0;
+}
+
+#login_bar form, #login_bar form > * {
+	margin: 0;
+}
+
+#login_bar form {
+	padding: 10px 0 ;
+	width: 550px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#login_bar form > * {
+	display: inline;
+	margin: 0 2px;
+}
+
+#map_container {
+	position: relative;
+}
+
+#map_container #map_overlay {
+	position: absolute;
+	top: 0;
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+	z-index: 0;
+}
+
+#map_overlay {
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#map_hint {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 250px;
+	left: 250px;
+}
+
+#map_hint h3 {
+	color: #FFF;
+	padding: 15px 15px 0 15px;
+	margin: 0;
+}
+
+#map_hint h5 {
+	padding: 0 15px 15px 15px;
+}
+
+#map_hint a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#overlay_message, #overlay_message h1 {
+
+	color: #FFF;
+
+}
+
+#overlay_message {
+
+	margin-top: 90px;
+
+}
+
+#overlay_message p {
+
+	margin-left: 5px;
+
+}
+
+#content {
+	background-color: #FFF;
+	padding: 16px;
+	padding-bottom: 30px;
+	padding-top: 20px;
+}
+
+.container h1 {
+	padding-top: 0px;
+}
+
+#search_form {
+	padding-bottom: 20px;
+}
+
+label {
+	text-align: left;
+}
+
+.amenity_label {
+	text-align: left;
+	padding: 5px 0 5px 0;
+}
+
+table {
+	width: 100%;
+}
+
+table thead {
+	background-color: #600;
+	color: #FFF;
+}
+
+table th{
+	padding: 10px 0 10px 0;
+}
+
+table td {
+	padding: 20px 0 20px 20px;
+}
+
+table.striped tr:nth-child(even) {
+	background-color: #F5F5F5;
+}
+
+#residence_frame {
+	height: 100%;
+}
+
+.alert, .notice {
+	padding: 0;
+	margin: 0;
+}
+
+.highlight {
+	background-color: #822;
+	color: #FFF;
+	transition: all 0.5s;
+}
+
+.highlight a {
+	color: #FFF;
+	transition: all 0.5s;
+}
+
+.collapsible {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/* RESIDENCE DETAIL VIEW */
+#res_title_bar {
+	background-color: #555;
+	padding: 20px 30px;
+}
+
+#res_title_bar * {
+	color: #FFF;
+	padding: 0;
+	margin: 0;
+}
+
+.left {
+	float: left;
+}
+
+#res_title_bar h3 {
+	float: right;
+}
+
+#res_title_bar h2 {
+	font-weight: bold;
+}
+
+#res_list {
+	padding: 0 20px;
+	float: left;
+}
+
+.big_info, .tiny_info {
+	color: #600;
+	font-family: Univers, Helvetica, Arial, sans-serif;
+	font-weight: 300; 
+}
+
+.bullet_list {
+	list-style-type: none;
+}
+
+.bullet_list li:before {
+	content: "• ";
+    color: #600;
+}
+
+#image_gallery {
+	float: right;
+}
+
+#image_gallery > a img {
+	float: right;
+	width: 325px;
+}
+
+#secondary_images {
+	text-align: center;
+}
+
+#secondary_images img {
+	width: 70px;
+	padding: 10px 5px;
+}
+
+.detail.row {
+	width: 100%;
+	clear: left;
+}
+
+#results_table thead {
+	cursor: pointer;
+}
+
+#results_table td {
+	vertical-align: middle;
+}
+
+th.headerSortUp, th.headerSortDown {
+	background-color: #90171b;
+}

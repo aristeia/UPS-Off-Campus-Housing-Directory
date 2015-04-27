@@ -1,0 +1,104 @@
+<div class = "container">
+
+  <%= form_for(@residence) do |f| %>
+
+  <div class="field">
+    Address
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    Alternate Address
+    <%= f.text_field :address2 %>
+  </div>
+
+  <div class="field">
+    City
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    State
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    Zipcode
+    <%= f.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    Residence Type (Apartment or House)
+    <%= f.text_field :restype %>
+  </div>
+
+  <div class="field">
+    Bedrooms Available
+    <%= f.text_field :bedrooms_available %>
+  </div>
+
+  <div class="field">
+    Bedrooms Total
+    <%= f.text_field :bedrooms_total %>
+  </div>
+
+  <div class="field">
+    Bathrooms Total
+    <%= f.text_field :bathrooms %>
+  </div>
+
+  <div class="field">
+    Miles from Campus
+    <%= f.text_field :miles_from_campus %>
+  </div>
+
+  <div class="field">
+    Total Monthly Rent($)
+    <%= f.text_field :total_monthly_rent %>
+  </div>
+
+  <div class="field">
+    Arrangement
+    <%= f.text_field :arrangement %>
+  </div>
+
+  <div class="field">
+    Description
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    Notes
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="field">
+    Furnishing
+    <%= f.text_field :furnishing%>
+  </div>
+
+  Laundry? <%= check_box_tag(:am_laundry) %> <br>
+  Coin Operated Laundry? <%= check_box_tag(:am_coin_op_laundry) %> <br>
+  Room for extra storage? <%= check_box_tag(:am_extra_storage) %> <br>
+  Cable TV? <%= check_box_tag(:am_cable_tv) %> <br>
+  Smoking? <%= check_box_tag(:am_smoking_allowed) %> <br>
+  Smoke detectors? <%= check_box_tag(:am_smoke_detector) %> <br>
+  ADA accessible? <%= check_box_tag(:am_ada_accessible) %> <br>
+  Internet Included? <%= check_box_tag(:am_internet_included) %> <br>
+  Regrigerators? <%= check_box_tag(:am_refrigerator) %> <br>
+  Dishwasher? <%= check_box_tag(:am_dishwasher) %> <br>
+  Lawn care included? <%= check_box_tag(:am_lawn_care_included) %> <br>
+  Water included? <%= check_box_tag(:am_cable_tv) %> <br>
+  Sewer included? <%= check_box_tag(:am_sewer_included) %> <br>
+  Garbage included? <%= check_box_tag(:am_garbage_included) %> <br>
+  Electricity included? <%= check_box_tag(:am_electricity_included) %> <br>
+    
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+
+
+  <!--  attr_accessible :address, :address2, :latitude, :longitude, :city, :state, :zipcode, :slug, :restype, :bedrooms_available, :bedrooms_total, :bathrooms, :miles_from_campus, :total_monthly_rent, :arrangement, :contact, :description, :notes, :furnishing, :parking, :available, :lease_term, :security_deposit, :security_deposit_refundable, :heating_type, :am_laundry, :am_coin_op_laundry, :am_extra_storage, :am_cable_tv, :am_smoking_allowed, :am_smoke_detector, :am_ada_accessible, :am_internet_included, :am_stove, :am_refrigerator, :am_dishwasher, :am_lawn_care_included, :am_water_included, :am_sewer_included, :am_garbage_included, :am_electricity_included -->
+

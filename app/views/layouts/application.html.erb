@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Off-Campus Housing Search</title>
+
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+ 	<%= javascript_include_tag "application" %>
+ 	<%= javascript_include_tag params[:controller] %>
+
+	<script src="jquery.rateit.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+	<script type="text/javascript">
+		var geocoder, map;
+		
+        function init() {
+        	geocoder = new google.maps.Geocoder();
+
+	        if($("#map").length != 0) {
+	        	// center on the school
+	            var mapOptions = {
+	                center: { lat: 47.263628, lng: -122.479609 },
+	                zoom: 14
+	            };
+	            
+	            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	    	}
+
+	    	// do the geocoding part
+	    	// tried a foreach loop, but dark things happened
+	    	<% unless @residences.nil? %>
+		    	<% @residences.each do |residence| %>
+		    		<% unless residence.latitude.nil? or residence.longitude.nil? %>
+			    		var pos = new google.maps.LatLng(<%= residence.latitude %>, 
+			    			<%= residence.longitude %>);
+
+		    			var mark<%=residence.id%> = new google.maps.Marker({
+		    				map: map,
+		    				position: pos,
+		    			});
+
+		    			google.maps.event.addListener(mark<%=residence.id%>, 'click', function() {
+						    window.location = "residences/<%=residence.id%>";
+						});
+					<% end %>
+		    	<% end %>
+	    	<% end %>
+        }
+        
+        google.maps.event.addDomListener(window, 'load', init);
+    </script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		Shadowbox.init({skipSetup: true});
+	</script>
+
+</head>
+<body>
+	<!-- BEGIN HEADER -->
+	<div id="header">
+		<div id="header_content">
+			<div id="logo"></div>
+			<h3 id="title">Off-Campus Housing Search</h3>
+		</div>
+	</div>
+
+	<div id="nav_bar">
+		<div id="nav">
+				<ul class="eight columns">
+					<li><%= link_to "Search", search_path %></li>
+					<li><%= link_to "Residences", residences_path %></li>
+					<li><%= link_to "Landlords", landlords_path %></li>
+					<% if @current_user.nil? %>
+						<li><a id="login_link" href="#">Sign In</a></li>
+					<% else %>
+						<li><a id="logout_link" href="/logout">Logout: <%= @current_user.full_name %></a></li>
+					<% end %>
+
+				</ul>
+		</div>
+	</div>
+
+	<div id="login_select" class="bar">
+		<button id="landlord_button">Sign in as Landlord</button>
+		<button id="ups_button">Sign in with UPS account</button>
+	</div>
+
+	<div id="login_bar" class="bar">
+		<form name="login_form" action="" method="post">
+			<input type="text" name="email" placeholder="Email">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" name="login_button" value="Sign in">
+			
+		</form>
+	</div>
+
+	<!-- END HEADER -->
+
+<%= yield %>
+
+</body>
+</html>

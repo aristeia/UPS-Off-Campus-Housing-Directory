@@ -1,0 +1,11 @@
+Feature: As a student
+	So that I can help other students avoid bad landlords
+	I want to be able to review a landlord
+
+Scanrio:
+When I am on the Landlord page
+ And I click "Review"
+  And I fill in "Description" with "A few words."
+   And I click "Submit Review"
+Then I should be on the Landlord page
+ But I should see "A few words."

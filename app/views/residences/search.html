@@ -1,0 +1,92 @@
+<div id="map_container">
+
+	<div id="map"></div>
+
+	<div id="map_overlay">
+		<div class="container">
+			<div id="overlay_message" class="offset-by-four column">
+				<h1>University of Puget Sound Off-Campus Housing Search</h1>
+				<p>Click a marker on the map to view information about a residence, or use the search options below to refine your search.</p>
+				<input type="button" id="begin_search_button" value="Begin Search">
+				<input type="button" id="view_map_button" value="View Map">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		//View Map button action
+		$("#view_map_button").on("click", function() {
+			$("#map_overlay").animate({opacity: 0}, 500, function() {
+				$("#map_overlay").css({"display" : "none"})
+			});
+		});
+
+		//Begin Search button action
+		$("#begin_search_button").on("click", function() {
+			$("html, body").animate({scrollTop: $("#content").offset().top}, 500);
+		});
+
+	});
+</script>
+
+<div id="content" class="container">
+
+	<!-- rails_admin "flash" messages -->
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<h1 class="sixteen columns">Housing Search</h1>
+	<p class="offset-by-one">Click the Residences tab above to see all available residences, or use this form to narrow your search.</p>
+
+	<form id="search_form" name="search" action="<%= residences_path %>" method="get">
+
+		<div class="row">
+			<label class="three columns" for="search[restype]">Residence type:</label>
+			<select name="search[restype]">
+				<%= options_for_select @restypes, @selected[:restype] %>
+			</select>
+		</div>
+
+		<div class="row">
+			<label class="three columns" for="search[bedrooms_available]">Bedrooms:</label>
+			<select name="search[bedrooms_available]">
+				<%= options_for_select @bedrooms, @selected[:bedrooms_available] %>
+			</select>
+		</div>
+
+		<div class="row">
+			<label class="three columns" for="search[total_monthly_rent]">Total monthly rent:</label>
+			<%= number_field_tag "search[total_monthly_rent]", nil, step: 100, :value => @selected[:total_monthly_rent] %>
+		</div>
+
+		<div class="row">
+			<label class="three columns" for="search[miles_from_campus]">Miles from campus:</label>
+			<select name="search[miles_from_campus]">
+				<%= options_for_select @miles_options, @selected[:miles_from_campus] %>
+			</select>
+		</div>
+
+	<!-- BEGIN AMENITIES -->
+		<h3 class="">Amenities</h3>
+		<div id="amenities_boxes" class="row">
+			<fieldset>
+				<% @amenities.each do |amenity, name| %>
+					<%= label_tag "search[#{amenity}]", name, class: "four columns amenity_label" do %>
+						<%= check_box_tag "search[#{amenity}]", 1, (@checked_amenities.include? amenity) %>
+						<span><%= name %></span>
+					<% end %>
+				<% end %>
+			</fieldset>
+		</div>
+	<!-- END AMENITITES -->
+
+		<div class="offset-by-one">
+			<input class="fourteen columns columns" type="submit" id="search_submit" value="Search">
+		</div>
+
+	</form>
+
+</div>

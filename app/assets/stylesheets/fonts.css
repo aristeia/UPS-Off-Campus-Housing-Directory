@@ -1,0 +1,91 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=329d2eb3-bb47-4a0d-8fec-4e1138962a70");
+@font-face{
+	font-family:"Univers";
+	src:url("http://www.pugetsound.edu/css/fonts/2b61512c-069e-4111-bb23-9a918f94a74d.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/2b61512c-069e-4111-bb23-9a918f94a74d.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/11b816e7-d678-48dd-bc75-560de9c19049.svg#11b816e7-d678-48dd-bc75-560de9c19049") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/ecf89914-1896-43f6-a0a0-fe733d1db6e7.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/7628f343-8c36-4707-9559-8feb86c0462f.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
+@font-face{
+	font-family:"Univers";
+	src:url("http://www.pugetsound.edu/css/fonts/783e01cd-5eb8-41d7-a380-a18673f2983b.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/783e01cd-5eb8-41d7-a380-a18673f2983b.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/caa7a31a-310f-4020-8311-89816a31472f.svg#caa7a31a-310f-4020-8311-89816a31472f") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/90c17e08-290d-4eba-ab33-77c81c1f559d.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/d93b9eab-632d-4aaf-b7fa-5c17060d62fc.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+	font-family:"Univers";
+	src:url("http://www.pugetsound.edu/css/fonts/b5c30ea8-0700-4fd2-aa12-cc45074693a9.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/b5c30ea8-0700-4fd2-aa12-cc45074693a9.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/ac8280da-3de5-456d-bd77-8f01665452a9.svg#ac8280da-3de5-456d-bd77-8f01665452a9") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/7b95cb9a-a288-4405-97a0-13095f56a903.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/c7481806-4ea4-40db-a623-7bc352bbbe43.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family:"UniversCondensed";
+	src:url("http://www.pugetsound.edu/css/fonts/aefefc4e-9cb8-4e8e-8599-dda705456734.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/aefefc4e-9cb8-4e8e-8599-dda705456734.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/0abcce12-2274-4ee7-b6d5-0066b5f5f670.svg#0abcce12-2274-4ee7-b6d5-0066b5f5f670") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/1eaf27c0-f4de-4273-9f4c-1b3236ad2f3c.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/9b913baf-b1f0-47d2-8c76-42f59650058f.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family:"Univers";
+	src:url("http://www.pugetsound.edu/css/fonts/db1c462f-8890-4a11-9de5-36872279e20a.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/db1c462f-8890-4a11-9de5-36872279e20a.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/9178e351-95c5-4913-9eeb-fd0645a18c2d.svg#9178e351-95c5-4913-9eeb-fd0645a18c2d") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/b993da84-c1f6-474a-8f00-8aa797b3de8f.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/58403ef6-4c15-4280-b4b6-9acf50804f4f.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face{
+	font-family:"AdobeGaramond";
+	src:url("http://www.pugetsound.edu/css/fonts/cc631089-fa2c-4288-baf8-2e744de1a554.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/cc631089-fa2c-4288-baf8-2e744de1a554.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/63e15210-781f-4eae-b157-1a28f02f1cfe.svg#63e15210-781f-4eae-b157-1a28f02f1cfe") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/bb497139-4ed5-41d1-905c-46d29a1b30f8.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/80bceb3f-535e-478f-95eb-db6597482771.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+@font-face{
+	font-family:"AdobeGaramond";
+	src:url("http://www.pugetsound.edu/css/fonts/73fe293c-69da-4927-80ce-773ee1a1879c.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/73fe293c-69da-4927-80ce-773ee1a1879c.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/6e4e2084-ff69-479e-b179-92d90deb7885.svg#6e4e2084-ff69-479e-b179-92d90deb7885") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/859018fa-3c03-484b-8774-97bd6548d48d.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/abb87b70-21d4-4ac2-bf9f-41548a67e564.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face{
+	font-family:"AdobeGaramond";
+	src:url("http://www.pugetsound.edu/css/fonts/0d0bd309-6c34-40a5-9a6c-9760379b7c5e.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/0d0bd309-6c34-40a5-9a6c-9760379b7c5e.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/498f83f0-7a41-4bfb-82d9-e7ced50ad6dc.svg#498f83f0-7a41-4bfb-82d9-e7ced50ad6dc") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/7dc507e2-738a-4a3d-9253-31a1f36bf337.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/37d87f5a-c625-4343-a3d8-00c73e1bc91a.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face{
+	font-family:"Nimbus";
+	src:url("http://www.pugetsound.edu/css/fonts/f89ee4ac-b5f0-4422-8dd7-3e355fba718a.eot?#iefix");
+	src:url("http://www.pugetsound.edu/css/fonts/f89ee4ac-b5f0-4422-8dd7-3e355fba718a.eot?#iefix") format("eot"),
+		url("http://www.pugetsound.edu/css/fonts/ead1c1fa-6fa2-4024-b9ce-3128cd7a2f96.svg#ead1c1fa-6fa2-4024-b9ce-3128cd7a2f96") format("svg"),
+		url("http://www.pugetsound.edu/css/fonts/9585e44d-f531-4fd8-b3b4-5976350fae23.woff") format("woff"),
+		url("http://www.pugetsound.edu/css/fonts/4e488f3b-02e7-4c3e-a113-e21af1a2f85e.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}

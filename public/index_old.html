@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Off-Campus Housing Search</title>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- Login frame animation -->
+	<script type="text/javascript">
+		$(function() {
+			$("#header #login_frame").css({opacity : 0});
+			$("#login_link").on("click", function() {
+				$("#header #login_frame").animate({ opacity: 1 }, 500);
+			});
+		});
+	</script>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/fonts.css">
+	<link rel="stylesheet" href="stylesheets/styles.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div id="header">
+		<div id="header_content">
+			<div id="logo"></div>
+			<div id="nav">
+				<ul>
+					<li><a href="#">Search</a></li>
+					<li><a href="#">My Watch List</a></li>
+					<li><a id="login_link" href="javascript:void(0);">Sign In</a></li>
+					<li><a href="#">Sign Out</a></li>
+					<div id="login_frame">
+				</ul>
+			</div>
+			<div id="login_frame">
+				<form name="login_form" action="" method="post">
+					<h2>Sign in<h2>
+					<input type="text" name="username" placeholder="Username">
+					<input type="password" name="password" placeholder="Password">
+					<input type="submit" name="login_button" value="Sign in">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--<iframe id="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=210265692735316049463.0004c00ccf775c852a9df&amp;hl=en&amp;ie=UTF8&amp;t=h&amp;ll=47.262142,-122.481658&amp;spn=1.0,1.0&amp;z=16&amp;output=embed"></iframe>-->
+
+	<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10830.683585686473!2d-122.48166669999999!3d47.26213835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDE1JzQzLjciTiAxMjLCsDI4JzU0LjAiVw!5e0!3m2!1sen!2sus!4v1413936774562" frameborder="0" style="border:0"></iframe>
+
+	<div id="map_overlay">
+
+		<div class="container">
+			<div id="overlay_message" class="offset-by-four column">
+				<h1>University of Puget Sound Off-Campus Housing Search</h1>
+				<p>Here you can research off-campus housing options around the university campus.</p>
+				<input type="button" value="Begin Search">
+				<input type="button" value="View Map">
+			</div>
+		</div>
+	</div>
+
+	<div id="content" class="container">
+		
+	</div>
+
+</body>
+</html>

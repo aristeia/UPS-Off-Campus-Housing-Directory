@@ -1,0 +1,26 @@
+---
+idp_lists:
+  https://idpdev.pugetsound.edu/idp/shibboleth:
+    certificate: | 
+      -----BEGIN CERTIFICATE-----
+      MIIDNDCCAhygAwIBAgIVAOCcreUOmiOG3xoRIC3Ym1PXDT9rMA0GCSqGSIb3DQEB
+      BQUAMB0xGzAZBgNVBAMTEmlkcC5wdWdldHNvdW5kLmVkdTAeFw0xNDA0MDQyMDI2
+      MTNaFw0zNDA0MDQyMDI2MTNaMB0xGzAZBgNVBAMTEmlkcC5wdWdldHNvdW5kLmVk
+      dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKIFr9xIP2yR/5PaQWE1
+      KQQsGVBaNLOlWrPyQsre6V6FaBpAp9i0dgFchxQA0ZGibTPxNN05ArpwLgMImZUq
+      /4ed5RXC61c6p8Xg75XukTbAnREapifNkN3pgVnfGuaQ5sGHloJseeW7PvXzt+VW
+      tltOi2mweNWQfc2eDD0MfGoPjUOKiKVD79QnWr5xezwMPibkDylMBiL9mjRAZy0T
+      VnrP1L+haaS6mTDvHgJdqJRMFn9fpqVAXKYKUFPpXv1H3JNYf2n/Js4tySYOkU/H
+      qN+CDW12HU124SEoX04PM0HMXdnE3kvKly8XD7kKXsw38JC3febo3G9oe+oeco0p
+      0qcCAwEAAaNrMGkwSAYDVR0RBEEwP4ISaWRwLnB1Z2V0c291bmQuZWR1hilodHRw
+      czovL2lkcC5wdWdldHNvdW5kLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+      KYEx6iRREVlZzqlIpSIBHZlPXqswDQYJKoZIhvcNAQEFBQADggEBAH9cDcUTyhvc
+      bQDLqX3WbDADas8DsJDrs4kv3kFZXU96VJ2QCFHuYb2trlrTpzGzeujcFGoVxB91
+      gVeMz9KBcnIJzqiIDZ+ihLfJaZZ+ELgd7VLm5SWSKrbffzeQIJj1o6QSURoNKNff
+      szMYxuCaiSFyj5lnAqZ1ui9OcICeM3NDZtWy2X9yF14rQhcmFwQXovxBsJAx11vR
+      DDLKGMpQHM8nP7V9l8tr69Wk7n8L/FSC7lK4rv2acn5l0akFQKp0NBg2ImeRBuZY
+      qdWHUVixGVEY5CgV9iwp1JqiADrKNRol15RSTTW11sOpWjvmMAIUzXYCk5l9lkJB
+      b/3hR0no3ho=
+      -----END CERTIFICATE-----
+    saml2_http_redirect: https://idpdev.pugetsound.edu/idp/profile/SAML2/Redirect/SSO
+sp_lists: {}

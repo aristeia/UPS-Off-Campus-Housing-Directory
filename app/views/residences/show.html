@@ -1,0 +1,76 @@
+<div id="content" class="container">
+	<div id="res_title_bar" class="row">
+		<div class="left">
+		  <h2><%= @residence.address %></h2>
+		  <h4><%= "#{@residence.city}, #{@residence.state} #{@residence.zipcode}" %></h4>
+		</div>
+		<h3><%= @residence.restype %></h3>
+	</div>
+		
+
+	<div id="res_list">
+	<h2 class="big_info">$<%= @residence.total_monthly_rent %> / Month</h2>
+	<h4 class="tiny_info">Refundable security deposit: $<%= @residence.security_deposit_refundable %></h4>
+	<ul>
+	  <li>Landlord: <%= link_to @landlord.name, landlord_path({:id => @landlord.id}) %></li>
+	  <ul>
+	    <li>Email: <%= link_to @landlord.email, "mailto:#{@landlord.email}" %></li>
+	    <li>Phone: <%= @landlord.phone1 %></li>
+	  </ul>
+	  <h4 class="tiny_info">Amenities:</h4>
+	  <ul class="bullet_list">
+	    <% @amenities.each do |amenity| %>
+	    <li><%= amenity %></li>
+	    <% end %>
+	  </ul>
+	</ul>
+	</div>
+
+	<div id="image_gallery">
+		<% if @primary_image.nil? %>
+			<a href="<%= @residence.restype[1..4] == 'part' ? '../images/default_apt.png' : '../images/default_house.png' %>" rel="shadowbox">
+				<img src="<%= @residence.restype[1..4] == 'part' ? '../images/default_apt.png' : '../images/default_house.png' %>">
+			</a>
+		<% else %>
+			<a href="<%= @primary_image.file_location_url(:res) %>" rel="shadowbox">
+				<img src="<%= @primary_image.file_location_url(:res) %>">
+			</a>
+		<% end %>
+		<div id="secondary_images">
+			<% unless @other_images.nil? %>
+				<% @other_images.each do |img| %>
+					<a href="<%= img.file_location_url(:res) %>" rel="shadowbox">
+						<img src="<%= img.file_location_url(:thumb) %>"/>
+					</a>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+
+	<div class="detail row">
+		<h2>Description</h2>
+		<%- unless @residence.bedrooms_available.nil? %>
+			<p>Bedrooms Available: <%= @residence.bedrooms_available %></p>
+		<%- end %>
+		<%- unless @residence.bathrooms.nil? %>
+			<p>Bathrooms: <%= @residence.bathrooms %></p>
+		<%- end %>
+		<%- unless @residence.furnishing.nil? || @residence.furnishing == "" %>
+			<p>Furnishing: <%= @residence.available %></p>
+		<%- end %>
+		<%- unless @residence.heating_type.nil? %>
+			<p>Heating Type: <%= @residence.heating_type %></p>
+		<%- end %>
+		<%- unless @residence.parking.nil? || @residence.parking == "" %>
+			<p>Parking: <%= @residence.parking %></p>
+		<%- end %>
+		<%- unless @residence.lease_term.nil? %>
+			<p>Lease Term: <%= @residence.lease_term %></p>
+		<%- end %>
+		<p><%= @residence.description %></p>
+		<%- unless @residence.notes.nil? %>
+		<h3>Notes</h3>
+		<%= @residence.notes %>
+		<%- end %>
+	</div>
+</div>

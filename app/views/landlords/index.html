@@ -1,0 +1,23 @@
+<div class = "container" id ="content">
+	<h1> Landlords </h1>
+		<table class = "row">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Rating</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @landlords.each do |landlord| %>
+					<tr>
+						<td><%= link_to landlord.name, landlord_path({:id => landlord.id}) %></td>
+						<td style = "text-align: center"><%= link_to landlord.email, "mailto:#{landlord.email}"%></td>
+						<td style = "text-align: center"><%=landlord.phone1%></td>
+						<td style = "text-align: center"><div class="rateit" data-rateit-value="<%= landlord[:average_score] %>" data-rateit-ispreset="true" data-rateit-readonly="true"></div></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+</div>
